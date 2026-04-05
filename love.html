@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Love ❤️</title>
+
+<style>
+body{
+background-color:#ffd6e7;
+text-align:center;
+font-family:Arial;
+padding:40px;
+overflow:hidden;
+}
+
+/* floating hearts */
+.heart{
+position:fixed;
+color:red;
+font-size:20px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(100vh);}
+100%{transform:translateY(-10vh);}
+}
+
+p{
+font-size:22px;
+color:#c2185b;
+line-height:1.8;
+}
+
+input{
+padding:10px;
+font-size:18px;
+border-radius:8px;
+border:none;
+}
+
+button{
+padding:10px 20px;
+font-size:18px;
+background:red;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+</style>
+
+<script>
+function createHeart(){
+var heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+document.body.appendChild(heart);
+setTimeout(()=>{heart.remove();},6000);
+}
+setInterval(createHeart,500);
+
+function checkAnswer(){
+var ans=document.getElementById("answer").value;
+
+if(ans==="27.07.2023"){
+window.location.href="proposal.html";
+}else{
+alert("Wrong answer ❤️ Try again!");
+}
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>❤️ My Love Message ❤️</h1>
+
+<p>
+En anbu purushanu entha anbu pondatti eluthuvathu unna evalo kasta paduthi eruka ana nee ennikum enna vittu ponathu illa ❤️‍🩹.<br><br>
+
+Namba love panathula erunthu ipo varikum nee tha en world 🌎 ana athu ennikum unnaku therunjathu illa.<br><br>
+
+Nee illa ma ennala eruka mudiyathu nu alavuku life ahh yoschi vachi eruka ma ennikum neeya kuda va eru nanum unna vittu poga matta.<br><br>
+
+Unna romba miss pandra ma nee epola enkuda erukiya apo la na romba happy 😊 ya erunthu eruka nenga v2la eruka anga vida unna romba romba pudikum ennaku.<br><br>
+
+Really I love 💕 u ma unna ennikum life la miss panidava matta ❤️.
+</p>
+
+<br><br>
+
+<h2>💌 Unnuku Oru Question</h2>
+<p>Namba first meet panna date?</p>
+
+<input type="text" id="answer" placeholder="Enter date">
+<br><br>
+
+<button onclick="checkAnswer()">Submit ❤️</button>
+
+</body>
+</html>
